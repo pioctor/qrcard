@@ -34,7 +34,9 @@ const result = document.getElementById("result")
 log.value = "init"
 navigator.mediaDevices.getUserMedia({
     audio: false,
-    video: true
+    video: {
+        facingMode: "environment"
+    }
 }).then(stream => {
     video.srcObject = stream
     result.value = qrParse(video)
