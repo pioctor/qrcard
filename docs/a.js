@@ -31,4 +31,4 @@ log.value = "init"
         }
     })
     result.value = await qrParse(video)
-})
+})()
