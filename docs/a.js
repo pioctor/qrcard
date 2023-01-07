@@ -31,6 +31,7 @@ function qrParse(video){
 const log = document.getElementById("log")
 const video = document.getElementById("video")
 const result = document.getElementById("result")
+log.value = "init"
 navigator.mediaDevices.getUserMedia({
     audio: false,
     video: true
