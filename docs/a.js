@@ -32,13 +32,14 @@ const log = document.getElementById("log")
 const video = document.getElementById("video")
 const result = document.getElementById("result")
 log.value = "init"
+
 navigator.mediaDevices.getUserMedia({
     audio: false,
     video: {
         facingMode: "environment"
     }
-}).then(stream => {
+}).then(async stream => {
     video.srcObject = stream
-    result.value = qrParse(video)
+    result.value = await qrParse(video)
     log.value = "ok"
 })
