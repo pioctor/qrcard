@@ -27,5 +27,3 @@ function qrParse(video){
     })
     document.getElementById("result").value = await qrParse(video)
 })
-
-navigator.mediaDevices.getUserMedia({ video: true, audio: false })
