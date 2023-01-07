@@ -17,29 +17,18 @@ function qrParse(video){
     })
 }
 
-// (async()=>{
-//     const video = document.getElementById("video")
-//     video.srcObject = await navigator.mediaDevices.getUserMedia({
-//         audio:false,
-//         video: {
-//             facingMode:"environment"
-//         }
-//     })
-//     document.getElementById("result").value = await qrParse(video)
-// })
 
 const log = document.getElementById("log")
 const video = document.getElementById("video")
 const result = document.getElementById("result")
 log.value = "init"
 
-navigator.mediaDevices.getUserMedia({
-    audio: false,
-    video: {
-        facingMode: "environment"
-    }
-}).then(async stream => {
-    video.srcObject = stream
+(async()=>{
+    video.srcObject = await navigator.mediaDevices.getUserMedia({
+        audio:false,
+        video: {
+            facingMode:"environment"
+        }
+    })
     result.value = await qrParse(video)
-    log.value = "ok"
 })
