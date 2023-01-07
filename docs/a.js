@@ -21,7 +21,7 @@ function qrParse(video){
 const log = document.getElementById("log")
 const video = document.getElementById("video")
 const result = document.getElementById("result")
-log.value = "init"
+log.value = "init";
 
 (async()=>{
     video.srcObject = await navigator.mediaDevices.getUserMedia({
@@ -30,7 +30,7 @@ log.value = "init"
             facingMode:"environment"
         }
     })
-    log.value = "video ok"
+    // log.value = "video ok"
     result.value = await qrParse(video)
-    log.value = "qr ok"
+    // log.value = "qr ok"
 })()
