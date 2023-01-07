@@ -13,7 +13,7 @@ function qrParse(video){
                 clearInterval(loop)
                 return res(result.data)
             } 
-        })
+        }, 100)
     })
 }
 
