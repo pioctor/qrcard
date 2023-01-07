@@ -32,5 +32,5 @@ log.value = "init";
     })
     log.value = "video ok"
     result.value = await qrParse(video)
-    log.value = "qr ok"
+    log.value = "qr ok";
 })()
